@@ -4,6 +4,7 @@
 set -e
 set -o pipefail   # don't ignore exit codes when piping output
 set -o nounset    # fail on unset variables
+set -o posix      # more strict failures in subshells
 unset GIT_DIR     # Avoid GIT_DIR leak from previous build steps
 
 ### Configure directories
