@@ -145,9 +145,9 @@ summarize_build() {
   (npm ls --depth=0 | tail -n +2 || true) 2>/dev/null
 }
 
-apt-get install software-properties-common python-software-properties
-add-apt-repository ppa:dhor/mywaay
-apt-get install graphicsmagick
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:dhor/mywaay
+sudo apt-get install graphicsmagick
 
 header "Build succeeded!"
 summarize_build | indent
