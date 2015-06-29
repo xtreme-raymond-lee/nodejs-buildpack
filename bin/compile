@@ -145,5 +145,8 @@ summarize_build() {
   (npm ls --depth=0 | tail -n +2 || true) 2>/dev/null
 }
 
+add-apt-repository ppa:dhor/mywaay
+apt-get install graphicsmagick
+
 header "Build succeeded!"
 summarize_build | indent
