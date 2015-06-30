@@ -15,8 +15,9 @@ BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 $BP_DIR/compile-extensions/bin/check_stack_support
 
 mkdir -p "$BUILD_DIR/.heroku/node/"
+mkdir -p "$BUILD_DIR/.gm/"
 cd $BUILD_DIR
-export PATH="$BUILD_DIR/.heroku/node/bin":$PATH
+export PATH="$BUILD_DIR/.heroku/node/bin:$BUILD_DIR/.gm/":$PATH
 
 # CF Common
 export BUILDPACK_PATH=$BP_DIR
@@ -150,8 +151,8 @@ tar -zxvf GraphicsMagick-1.3.9.tar.gz
 cd GraphicsMagick-1.3.9
 
 ./configure
-sudo make
-sudo make install
+make 
+make DESTDIR="$BUILD_DIR/.gm/" install
 cd ..
 
 header "Build succeeded!"
