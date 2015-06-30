@@ -155,5 +155,7 @@ make
 make DESTDIR="$BUILD_DIR/.gm/" install
 cd ..
 
+which gm
+
 header "Build succeeded!"
 summarize_build | indent
