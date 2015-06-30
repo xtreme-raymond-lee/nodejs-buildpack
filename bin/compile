@@ -158,7 +158,7 @@ cd ..
 which gm
 
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"\$BUILD_DIR/.gm/usr/local/bin:\$PATH\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
+echo "export PATH=\"\$HOME/.gm/usr/local/bin:\$PATH\"" > $BUILD_DIR/.profile.d/graphicsmagick.sh
 
 header "Build succeeded!"
 summarize_build | indent
