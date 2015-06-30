@@ -17,7 +17,7 @@ $BP_DIR/compile-extensions/bin/check_stack_support
 mkdir -p "$BUILD_DIR/.heroku/node/"
 mkdir -p "$BUILD_DIR/.gm/"
 cd $BUILD_DIR
-export PATH="$BUILD_DIR/.heroku/node/bin:$BUILD_DIR/.gm/":$PATH
+export PATH="$BUILD_DIR/.heroku/node/bin:$BUILD_DIR/.gm/usr/local/bin":$PATH
 
 # CF Common
 export BUILDPACK_PATH=$BP_DIR
